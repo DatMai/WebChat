@@ -1,0 +1,8 @@
+<div class="right-container row" *ngIf="this.isSelectedChatBox()" id="right-container">
+  <div class="left-section" [@leftSectionAnimation]="leftSectionState()">
+    <app-right-header class="app-right-header"></app-right-header>
+    <app-right-content></app-right-content>
+    <app-right-typing></app-right-typing>
+  </div>
+  <div class="right-section" @rightManagerAnimation *ngIf="this.isShowManager()"><app-right-manager></app-right-manager></div>
+</div>

@@ -1,0 +1,51 @@
+<div class="header" [style.background]="this.darkMode() ? this.background : ''" [style.color]="this.darkMode() ? this.color : ''">
+    <div @headerAnimation class="header__infor col-10">
+        <img src="../../../../assets/image/avatar.jpg" class="header__avatar" />
+        <h6 class="header__title">
+            {{ this.getSelectedChatContent().name }} <br />
+            <span class="header__title--small">Chào mọi người. mình là Đoan !!</span>
+        </h6>
+    </div>
+
+    <div @iconAnimation class="header__actions col-2">
+        <i class="far fa-eye" data-bs-toggle="modal" data-bs-target="#searchModal" data-bs-whatever="@getbootstrap"></i>
+
+        <i class="fas fa-ellipsis-v" (click)="this.showManager()" [style.color]="this.managerButtonDark?'#aaaaaa':''"></i>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Tạo cuộc hội thoại</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3 form-field">
+                            <input type="text" class="form-control form-input" placeholder=" " id="recipient-name" (keyup)="getKeyWord($event)" />
+                            <label for="recipient-name" class="col-form-label form-label">Nhập từ khóa cần tìm</label
+              >
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary btnclose"
+            data-bs-dismiss="modal"
+          >
+            Đóng
+          </button>
+          <button
+            type="button"
+            class="done btn btn-danger create"
+            data-bs-dismiss="modal"
+            (click)="getKeyWordToSearch()"
+          >
+            Tìm kiếm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

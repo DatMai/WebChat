@@ -1,0 +1,96 @@
+.typing {
+    //z-index: -9;
+    background-color: transparent;
+    //width: 105%;
+    //margin-left: -1vw;
+    // background-color: rgb(0, 0, 0);
+    padding-left: 2vw;
+    padding-top: 1.5vw;
+    height: 100px;
+    &__actions {
+        margin-left: 2px;
+        padding: 0 !important;
+        align-items: center;
+        .file__label {
+            margin-bottom: 0 !important;
+        }
+        #file {
+            display: none;
+        }
+    }
+    .input-text {
+        padding: 0 !important;
+        align-items: center;
+        outline: none;
+        font-size: 1vw;
+        width: 100vh;
+        border-radius: 10px;
+        border: none;
+    }
+    .button {
+        outline: none !important;
+        display: flex;
+        align-items: center;
+        font-size: 1.5vw;
+        padding: 0;
+        border: none;
+        background: none;
+        margin-left: 1vw;
+        background-image: linear-gradient(#d32a4c, #eb522c);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .sending-text {}
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: rgb(68, 68, 68);
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(#d32a4c, #eb522cc4);
+}
+
+.emojiArea {
+    position: absolute;
+    overflow-y: scroll;
+    margin-top: -24vw;
+    margin-left: 45vw;
+    height: 40vh;
+    width: 50vh;
+    // border: 2px solid #d83156;
+    border-radius: 10px;
+    background-image: linear-gradient(#d32a4c8c, #eb522c88);
+    cursor: pointer;
+    .emojis {
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .emojiArea {
+        margin-top: -24vw;
+        margin-left: 70vw;
+    }
+}
